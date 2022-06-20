@@ -1,4 +1,4 @@
-:set nu rnu
+:set nu
 :set autoindent
 :set tabstop=2
 :set shiftwidth=2
