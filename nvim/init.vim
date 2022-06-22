@@ -47,8 +47,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-o> o<Esc>
 nnoremap <C-p> O<Esc>
-nnoremap # :call ToggleNum()<CR>
-nnoremap . :set list!<CR>
+nnoremap <Leader># :call ToggleNum()<CR>
+nnoremap <Leader>. :set list!<CR>
 
 function ToggleNum()
 	if &rnu
