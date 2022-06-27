@@ -41,10 +41,12 @@ let g:airline_theme = 'onedark'
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader># :call ToggleNum()<CR>
@@ -58,5 +60,10 @@ function ToggleNum()
 	endif
 endfunction
 
-source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
-source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
+if has("win32")
+	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
+	source $LOCALAPPDATA\nvim\plug-config\airline.vim " Airline Styling
+else
+	source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
+	source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
+endif 
