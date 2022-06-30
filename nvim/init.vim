@@ -8,6 +8,9 @@
 :set hidden
 :set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 :set list
+:set wildignore+=node_modules/**
+:set wildignore+=templates/**
+:set wildignore+=postman/**
 
 call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -19,6 +22,7 @@ Plug 'vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/joshdick/onedark.vim' " Theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Coc
 Plug 'airblade/vim-gitgutter' " Git integration
+Plug 'https://github.com/ctrlpvim/ctrlp.vim' " Fuzzy File search
 call plug#end()
 
 let g:gitgutter_sign_added = ''
@@ -33,20 +37,24 @@ nmap <Leader>gp <Plug>(GitGutterPrevHunk)
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-let g:NERDTreeGitStatusUseNerdFonts = 1 
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let NERDTreeShowHidden=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'onedark'
+let g:ctrlp_show_hidden = 1
 :colorscheme onedark
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
-nnoremap <Leader>h <C-w>h
-nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader># :call ToggleNum()<CR>
@@ -60,10 +68,6 @@ function ToggleNum()
 	endif
 endfunction
 
-if has("win32")
-	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
-	source $LOCALAPPDATA\nvim\plug-config\airline.vim " Airline Styling
-else
-	source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
-	source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
-endif 
+source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
+source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
+
