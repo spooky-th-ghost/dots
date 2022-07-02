@@ -11,6 +11,7 @@
 :set wildignore+=node_modules/**
 :set wildignore+=templates/**
 :set wildignore+=postman/**
+:autocmd InsertEnter,InsertLeave * set cul!
 
 call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
