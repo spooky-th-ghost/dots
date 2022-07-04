@@ -39,7 +39,7 @@ nmap <Leader>gp <Plug>(GitGutterPrevHunk)
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 let g:NERDTreeGitStatusUseNerdFonts = 1
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'onedark'
 let g:ctrlp_show_hidden = 1
