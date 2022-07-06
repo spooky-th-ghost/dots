@@ -69,7 +69,7 @@ endfunction
 
 if has('win32')
 	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
-	source $LOCALAPPDATA\.config\nvim\plug-config\airline.vim " Airline Styling
+	source $LOCALAPPDATA\nvim\plug-config\airline.vim " Airline Styling
 else
 	source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
 	source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
