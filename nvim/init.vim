@@ -68,7 +68,10 @@ function ToggleNum()
 		set rnu
 	endif
 endfunction
-
-source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
-source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
-
+if has('win32')
+	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
+	source $LOCALAPPDATA\.config\nvim\plug-config\airline.vim " Airline Styling
+else
+	source $HOME/.config/nvim/plug-config/coc.vim " Coc settings
+	source $HOME/.config/nvim/plug-config/airline.vim " Airline Styling
+endif
