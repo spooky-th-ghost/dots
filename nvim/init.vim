@@ -68,6 +68,7 @@ function ToggleNum()
 endfunction
 
 if has('win32')
+	let g:airline_theme = 'night_owl'
 	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
 	source $LOCALAPPDATA\nvim\plug-config\airline.vim " Airline Styling
 else
