@@ -48,8 +48,6 @@ let g:ctrlp_show_hidden = 1
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <Leader>k <C-w>k
@@ -68,6 +66,7 @@ function ToggleNum()
 		set rnu
 	endif
 endfunction
+
 if has('win32')
 	source $LOCALAPPDATA\nvim\plug-config\coc.vim " Coc settings
 	source $LOCALAPPDATA\.config\nvim\plug-config\airline.vim " Airline Styling
