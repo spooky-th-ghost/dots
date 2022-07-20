@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/joshdick/onedark.vim' " Theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Coc
 Plug 'airblade/vim-gitgutter' " Git integration
+Plug 'rust-lang/rust.vim' " Rust fmt
 Plug 'https://github.com/ctrlpvim/ctrlp.vim' " Fuzzy File search
 call plug#end()
 
@@ -31,6 +32,7 @@ let g:gitgutter_sign_modified = ''
 let g:gitgutter_sign_removed = ''
 let g:gitgutter_sign_removed_first_line = ''
 let g:gitgutter_sign_modified_removed = ''
+let g:rustfmt_autosave = 1
 
 " Jump between hunks
 nmap <Leader>gn <Plug>(GitGutterNextHunk)
