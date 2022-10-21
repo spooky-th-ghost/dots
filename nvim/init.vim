@@ -15,8 +15,6 @@
 
 call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'Xuyuanp/nerdtree-git-plugin' " NerdTree git status highlights
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'vim-airline/vim-airline-themes' " Status bar themes
@@ -37,19 +35,21 @@ let g:rustfmt_autosave = 1
 " Jump between hunks
 nmap <Leader>gn <Plug>(GitGutterNextHunk)
 nmap <Leader>gp <Plug>(GitGutterPrevHunk)
+nmap <Leader>gh :GitGutterLineHighlightsToggle<CR>
+nmap <Leader>gs :GitGutterSignsToggle<CR>
+nmap <Leader>gc :Magit<CR>
+nmap <Leader>; $a;<Esc>
+nmap <Leader>, $a,<Esc>
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-let g:NERDTreeGitStatusUseNerdFonts = 1
-let g:NERDTreeShowHidden=1
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'onedark'
 let g:ctrlp_show_hidden = 1
 :colorscheme onedark
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-t> :Explore<CR>
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <Leader>k <C-w>k
