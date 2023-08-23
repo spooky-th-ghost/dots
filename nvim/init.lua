@@ -10,5 +10,3 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 2
 vim.opt.hidden = true
 vim.opt.list = true
---vim.opt.laststatus = 2
-vim.opt.title = true
