@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
 	use('rust-lang/rust.vim')
 	use('vim-airline/vim-airline')
 	use('vim-airline/vim-airline-themes')
+	use{'akinsho/bufferline.nvim', tag = '*', requires = 'nvim-tree/nvim-web-devicons'}
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
